@@ -1,0 +1,38 @@
+{
+  "name": "spklang",
+  "version": "10000.0.0",
+  "description": "SPK 언어 실행기 - Node처럼 spk [파일]로 실행",
+  "type": "module",
+  "bin": {
+    "spklang": "./dist/cli.js"
+  },
+  "main": "./dist/cli.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "spk-core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "spk",
+    "language",
+    "interpreter",
+    "cli"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/service-end/spk"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
